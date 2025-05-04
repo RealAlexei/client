@@ -6,6 +6,7 @@ import Products from './components/Products/Products';
 import Start from './components/Start/Start';
 import Book from './components/Book/Book';
 import ProductForm from './components/Products/ProductForm/ProductForm';
+import DashboardMainPage from './components/Dashboard/DashboardMainPage';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/book" element={<Book/>}/>
         <Route path="/dishes_form" element={<ProductForm/>}/>
         <Route path="/dishes_form/:id" element={<ProductForm/>}/>
+        <Route path="/dashboard" element={<DashboardMainPage/>}/>
       </Routes>
     </BrowserRouter>
     </div>
