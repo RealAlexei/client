@@ -1,7 +1,8 @@
 import React from "react";
 import useExcelStore from "../../dashboardDataStore";
 import LineDataChart from "./LineDataChart";
-import SimpleLineChart from "./SimpleLineChart"
+import Stacked from "./StackedBartChart";
+import { Container, Row, Col } from "react-bootstrap";
 
 const ChartTab = () => {
   const { excelData } = useExcelStore();
@@ -9,8 +10,12 @@ const ChartTab = () => {
   return (
         <div>
           <h2>График данных</h2>
-          <LineDataChart data={excelData} />
-          <SimpleLineChart />
+          <Container>
+          <Row>
+            <Col><LineDataChart data={excelData} /></Col>
+            <Col><Stacked /></Col>
+          </Row>
+          </Container>
         </div> 
   );
 };
